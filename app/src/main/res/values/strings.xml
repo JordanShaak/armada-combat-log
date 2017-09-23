@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Armada Combat Log</string>
+    <string name="btn_rebel">Rebels</string>
+    <string name="btn_imperial">Imperials</string>
+    <string name="btn_submit">Record</string>
+    <string name="btn_update">Update</string>
+    <string name="btn_delete">Delete</string>
+    <string name="rad_first">First Player</string>
+    <string name="rad_second">Second Player</string>
+    <string name="txt_opphint">Opponent Name</string>
+    <string name="txt_objhint">Objective</string>
+    <string-array name="points">
+        <item>1–10</item>
+        <item>2–9</item>
+        <item>3–8</item>
+        <item>4–7</item>
+        <item>5–6</item>
+        <item>6–5</item>
+        <item>7–4</item>
+        <item>8–3</item>
+        <item>9–2</item>
+        <item>10–1</item>
+    </string-array>
+    <string name="points_prompt">Result</string>
+    <string-array name="objectives">
+        <item>Advanced Gunnery</item>
+        <item>Blockade Run</item>
+        <item>Close-Range Intel Scan</item>
+        <item>Most Wanted</item>
+        <item>Opening Salvo</item>
+        <item>Precision Strike</item>
+        <item>Station Assault</item>
+        <item>Targeting Beacons</item>
+        <item>Capture the VIP</item>
+        <item>Contested Outpost</item>
+        <item>Fighter Ambush</item>
+        <item>Fire Lanes</item>
+        <item>Fleet Ambush</item>
+        <item>Hyperspace Assault</item>
+        <item>Jamming Barrier</item>
+        <item>Planetary Ion Cannon</item>
+        <item>Dangerous Territory</item>
+        <item>Intel Sweep</item>
+        <item>Minefields</item>
+        <item>Navigational Hazards</item>
+        <item>Salvage Run</item>
+        <item>Sensor Net</item>
+        <item>Solar Corona</item>
+        <item>Superior Positions</item>
+    </string-array>
+</resources>
