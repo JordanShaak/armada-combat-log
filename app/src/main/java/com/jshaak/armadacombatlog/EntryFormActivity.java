@@ -18,8 +18,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-import org.w3c.dom.Text;
-
 import java.util.Arrays;
 
 import static java.lang.Integer.parseInt;
@@ -28,9 +26,9 @@ public class EntryFormActivity extends AppCompatActivity {
     private String[] arrObjectives;
     //private Bundle bundle;
     //private ArrayList<Record> recordList;
-    RecordDbHelper dbHelper;
-    Bundle bundle;
-    Button btnDelete;
+    private RecordDbHelper dbHelper;
+    private Bundle bundle;
+    private Button btnDelete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +45,7 @@ public class EntryFormActivity extends AppCompatActivity {
         actv = (AutoCompleteTextView) findViewById(R.id.actvObjective);
 
         arrObjectives = getResources().getStringArray(R.array.objectives);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,arrObjectives);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arrObjectives);
         actv.setAdapter(adapter);
 
         actv.setOnEditorActionListener(new DoneOnEditorActionListener());
@@ -72,8 +70,8 @@ public class EntryFormActivity extends AppCompatActivity {
         int order = rs.getInt(rs.getColumnIndex(RecordDbHelper.COLUMN_NAME_ORDER));
         int wipe = rs.getInt(rs.getColumnIndex(RecordDbHelper.COLUMN_NAME_ENDCON));
         String objective = rs.getString(rs.getColumnIndex(RecordDbHelper.COLUMN_NAME_OBJECTIVE));
-        String playerFaction = rs.getString(rs.getColumnIndex(RecordDbHelper.COLUMN_NAME_FACTION));;
-        String opFor = rs.getString(rs.getColumnIndex(RecordDbHelper.COLUMN_NAME_OPFOR));;
+        String playerFaction = rs.getString(rs.getColumnIndex(RecordDbHelper.COLUMN_NAME_FACTION));
+        String opFor = rs.getString(rs.getColumnIndex(RecordDbHelper.COLUMN_NAME_OPFOR));
         if (!rs.isClosed()) {
             rs.close();
         }
@@ -123,13 +121,13 @@ public class EntryFormActivity extends AppCompatActivity {
         btnDelete.setVisibility(View.VISIBLE);
     }
 
-    public void deleteEntry(View v) {
+    public void deleteEntry(@SuppressWarnings("UnusedParameters") View v) {
         int recordID = bundle.getInt(MainActivity.KEY_EXTRA_RECORD_ID);
         dbHelper.deleteRecord(recordID);
         finish();
     }
 
-    public void showDatePickerDialog(View v) {
+    public void showDatePickerDialog(@SuppressWarnings("UnusedParameters") View v) {
         DialogFragment newFragment = new DatePickerFragment();
         newFragment.show(getFragmentManager(), "datePicker");
     }
@@ -139,7 +137,7 @@ public class EntryFormActivity extends AppCompatActivity {
         view.setText(date);
     }
 
-    public void formSubmit(View v) throws IncompleteFormException {
+    public void formSubmit(@SuppressWarnings("UnusedParameters") View v) {
         // getting all of these values is as easy as taking the information from their fields
         String date = (String) ((TextView) findViewById(R.id.txtDate)).getText();
         String opponent = ((EditText) findViewById(R.id.txtOpponent)).getText().toString();
@@ -191,6 +189,7 @@ public class EntryFormActivity extends AppCompatActivity {
 
             // what a roundabout way of getting this
             // this throws a NumberFormatException if the first character isn't a number
+            //noinspection ResultOfMethodCallIgnored
             parseInt(Character.toString(date.charAt(0)));
 
             if (opponent.length() < 1) {

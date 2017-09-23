@@ -1,12 +1,12 @@
 package com.jshaak.armadacombatlog;
 
 /**
- * Created by Jordan Shaak on 9/14/2017.
+ * Simple exception class to return a string. May be expanded for future functionality, so I created a custom one.
  */
 
-public class IncompleteFormException extends Exception {
-    private String message;
-    public IncompleteFormException(String message)
+class IncompleteFormException extends Exception {
+    private final String message;
+    IncompleteFormException(String message)
     {
         this.message = message;
     }

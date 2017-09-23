@@ -7,19 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    //private ArrayList<Record> recordList = new ArrayList<Record>();
-    public ListView listView;
-    //public AdapterRecord adbRecord;
+    private ListView listView;
     public final static String KEY_EXTRA_RECORD_ID = "KEY_EXTRA_RECORD_ID";
 
-    RecordDbHelper dbHelper;
-    NotSoSimpleCursorAdapter cursorAdapter;
+    private RecordDbHelper dbHelper;
+    private NotSoSimpleCursorAdapter cursorAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Called when the user hits Add Result button
-    public void addResult(View view) {
+    public void addResult(@SuppressWarnings("UnusedParameters") View view) {
         // stuff
         Intent intent = new Intent(this, EntryFormActivity.class);
         startActivity(intent);

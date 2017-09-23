@@ -10,9 +10,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-public class NotSoSimpleCursorAdapter extends SimpleCursorAdapter {
+class NotSoSimpleCursorAdapter extends SimpleCursorAdapter {
 
-    public NotSoSimpleCursorAdapter(Context context, int layout, Cursor c, String[] from, int[] to, int flags) {
+    @SuppressWarnings("SameParameterValue")
+    NotSoSimpleCursorAdapter(Context context, int layout, Cursor c, String[] from, int[] to, int flags) {
         super(context, layout, c, from, to, flags);
     }
 

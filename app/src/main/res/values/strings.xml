@@ -48,4 +48,10 @@
         <item>Solar Corona</item>
         <item>Superior Positions</item>
     </string-array>
+    <string name="txt_vs">VS</string>
+    <string name="txt_playerheader">You</string>
+    <string name="txt_oppheader">Opponent</string>
+    <string name="txt_wipe">Fleet wiped?</string>
+    <string name="txt_dateprompt">Tap to set date</string>
+    <string name="txt_open">Add Result</string>
 </resources>
