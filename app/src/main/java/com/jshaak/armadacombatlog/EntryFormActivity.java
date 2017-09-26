@@ -92,14 +92,14 @@ public class EntryFormActivity extends AppCompatActivity {
             ((CheckBox) findViewById(R.id.cbxWipe)).setChecked(true);
         }
 
-        // default behaviour of these buttons is unchecked (Imperials)
-        if(playerFaction.equals("Rebels"))
+        // default behaviour of these buttons is checked for player and unchecked for opFor (since I'm a rebel player)
+        if(playerFaction.equals("Imperials"))
         {
-            ((ToggleButton) findViewById(R.id.tgbPlayer)).setChecked(true);
+            ((ToggleButton) findViewById(R.id.tgbPlayer)).setChecked(false);
         }
         if(opFor.equals("Rebels"))
         {
-            ((ToggleButton) findViewById(R.id.tgbPlayer)).setChecked(false);
+            ((ToggleButton) findViewById(R.id.tgbOpponent)).setChecked(true);
         }
 
         // we require the last digit of the string of points, because the sequencing we set the spinner

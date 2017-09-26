@@ -22,12 +22,13 @@
         android:id="@+id/tgbOpponent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:checked="false"
         android:textOff="@string/btn_imperial"
         android:textOn="@string/btn_rebel"
         app:layout_constraintBaseline_toBaselineOf="@+id/tgbPlayer"
         app:layout_constraintLeft_toRightOf="@+id/textView"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginEnd="16dp" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <TextView
         android:id="@+id/textView"
