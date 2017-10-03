@@ -28,10 +28,12 @@ public class DatePickerFragment extends DialogFragment
 
     public void onDateSet(DatePicker view, int year, int month, int day) {
         // Do something with the date chosen by the user
-        String strMonth = "" + month, strDay =  "" + day;
+        // Month++ right away because the calendar uses 0-11 instead of the 1-12 humans are used to
         month++;
+        String strMonth = "" + month, strDay =  "" + day;
+
         if(month < 10) { strMonth = "0" + month; }
-        if(day < 10) { strDay = "0" + month; }
+        if(day < 10) { strDay = "0" + day; }
 
         String dateString = year + "-" + strMonth + "-" + strDay;
         ((EntryFormActivity) getActivity()).setDate(dateString);
