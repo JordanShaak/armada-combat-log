@@ -7,7 +7,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
 /**
- * Largely sourced from http://tonylukasavage.com/blog/2011/06/02/android-quick-tip--edittext-with-done-button-that-closes-the-keyboard/
+ * Sourced from http://tonylukasavage.com/blog/2011/06/02/android-quick-tip--edittext-with-done-button-that-closes-the-keyboard/
  */
 
 class DoneOnEditorActionListener implements TextView.OnEditorActionListener {
